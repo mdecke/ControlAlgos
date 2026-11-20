@@ -31,7 +31,7 @@ class LQR():
         #itteration from T-1 to 0 at 1 interval steps
             M_1 = self.R + self.B.T @ self.F @ self.B
             M_1_inv = np.linalg.inv(M_1)
-            self.feedback_gains[k,:,:] = M_inv @ self.B.T @ self.F @ self.A
+            self.feedback_gains[k,:,:] = M_1_inv @ self.B.T @ self.F @ self.A
             M_2 = self.F - self.F @ self.B @ M_1_inv @ self.B.T @ self.F
             self.F = self.Q +  self.A.T @ M_2 @ self.A
             self.cost_to_go[k,:,:] = self.F
@@ -41,6 +41,6 @@ class LQR():
                                max_action:np.ndarray | int,
                          )->np.ndarray:
         self.solve_DARE()
-        initial_feedback_gain = self.feedback_gain[0,:,:]
+        initial_feedback_gain = self.feedback_gains[0,:,:]
         policy_output = np.clip((initial_feedback_gain @ state), min_action, max_action)
         return -policy_output
