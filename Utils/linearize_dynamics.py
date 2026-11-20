@@ -2,9 +2,12 @@ import numpy as np
 import gymnasium as gym
 
 class DynamicsHandler:
-    def __init__(self, env_name:str):
-        if env_name in gym.registry.keys():
-            self.name = env_name
+    def __init__(self, env:gym.Env):
+        self.make_dynamics_dict()
+        self.unwrapped_env = env.unwrapped
+
+        if env.spec.id in self.dynamics_dict.keys():
+            self.linearization_method_= self.dynamics_dict[env.spec.id]
         else:
             raise ValueError(f"{env_name} is not a valid gymnasium env")
 
