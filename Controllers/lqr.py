@@ -9,7 +9,7 @@ class LQR():
                       R:np.ndarray | float,
                       Q:np.ndarray | float,
                       P:np.ndarray | float,
-                      t: int,
+                      N: int,
                  ):
         self.n = state_dim
         self.m = control_dim
@@ -18,10 +18,10 @@ class LQR():
         self.P = P
         self.Q = Q
         self.R = R
-        self.time_horizon = t
+        self.time_horizon = N
 
-        self.feedback_gains = np.zeros((t, control_dim, state_dim))
-        self.cost_to_go = np.zeros((t+1, state_dim,state_dim))
+        self.feedback_gains = np.zeros((N, control_dim, state_dim))
+        self.cost_to_go = np.zeros((N+1, state_dim,state_dim))
 
     def solve_DARE(self)->None:
         self.F = self.P
