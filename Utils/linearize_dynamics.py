@@ -83,7 +83,15 @@ class DynamicsHandler:
 
     def linearize_pendulum_v1(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
         """Pendulum-v1, phys2d/Pendulum-v0: return (A, B) linearized about (x_eq, u_eq)."""
-        raise NotImplementedError
+        g = self.unwrapped_env.g
+        l = self.unwrapped_env.l
+        m = self.unwrapped_env.m
+
+        a_matrix = np.array([[0.0, 1.0],
+                             [(3*g) / (2*l), 0.0]])
+        b_matrix = np.array([[0.0],
+                             [3/(m*(l**2))]])
+        return (a_matrix, b_matrix)
 
     def linearize_acrobot_v1(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
         """Acrobot-v1: return (A, B) linearized about (x_eq, u_eq)."""
