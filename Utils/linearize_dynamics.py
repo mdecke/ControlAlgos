@@ -65,3 +65,167 @@ class DynamicsHandler:
             "HumanoidStandup-v4": self.linearize_humanoidstandup_v4_v5,
             "HumanoidStandup-v5": self.linearize_humanoidstandup_v4_v5,
         }
+
+    def linearize_cartpole_v0_v1(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """CartPole-v0, CartPole-v1: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_mountaincar_v0(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """MountainCar-v0: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_mountaincarcontinuous_v0(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """MountainCarContinuous-v0: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_pendulum_v1(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """Pendulum-v1, phys2d/Pendulum-v0: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_acrobot_v1(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """Acrobot-v1: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_phys2d_cartpole_v0_v1(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """phys2d/CartPole-v0, phys2d/CartPole-v1: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_lunarlander_v3(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """LunarLander-v3: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_lunarlandercontinuous_v3(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """LunarLanderContinuous-v3: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_bipedalwalker_v3(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """BipedalWalker-v3: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_bipedalwalkerhardcore_v3(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """BipedalWalkerHardcore-v3: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_carracing_v3(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """CarRacing-v3: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_reacher_v2(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """Reacher-v2: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_reacher_v4_v5(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """Reacher-v4, Reacher-v5: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_pusher_v2(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """Pusher-v2: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_pusher_v4(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """Pusher-v4: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_pusher_v5(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """Pusher-v5: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_invertedpendulum_v2(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """InvertedPendulum-v2: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_invertedpendulum_v4_v5(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """InvertedPendulum-v4, InvertedPendulum-v5: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_inverteddoublependulum_v2(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """InvertedDoublePendulum-v2: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_inverteddoublependulum_v4_v5(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """InvertedDoublePendulum-v4, InvertedDoublePendulum-v5: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_halfcheetah_v2(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """HalfCheetah-v2: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_halfcheetah_v3(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """HalfCheetah-v3: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_halfcheetah_v4_v5(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """HalfCheetah-v4, HalfCheetah-v5: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_hopper_v2(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """Hopper-v2: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_hopper_v3(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """Hopper-v3: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_hopper_v4_v5(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """Hopper-v4, Hopper-v5: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_swimmer_v2(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """Swimmer-v2: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_swimmer_v3(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """Swimmer-v3: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_swimmer_v4_v5(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """Swimmer-v4, Swimmer-v5: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_walker2d_v2(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """Walker2d-v2: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_walker2d_v3(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """Walker2d-v3: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_walker2d_v4(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """Walker2d-v4: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_walker2d_v5(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """Walker2d-v5: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_ant_v2(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """Ant-v2: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_ant_v3(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """Ant-v3: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_ant_v4_v5(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """Ant-v4, Ant-v5: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_humanoid_v2(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """Humanoid-v2: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_humanoid_v3(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """Humanoid-v3: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_humanoid_v4_v5(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """Humanoid-v4, Humanoid-v5: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_humanoidstandup_v2(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """HumanoidStandup-v2: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
+
+    def linearize_humanoidstandup_v4_v5(self, x_eq:np.ndarray, u_eq:np.ndarray)->tuple[np.ndarray, np.ndarray]:
+        """HumanoidStandup-v4, HumanoidStandup-v5: return (A, B) linearized about (x_eq, u_eq)."""
+        raise NotImplementedError
